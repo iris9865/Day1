@@ -1,0 +1,21 @@
+/* 메인헤더 */
+#main_header {
+  width: 960px; height: 160px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#main_header > #title {
+  position: absolute;
+  left: 20px; top: 30px;
+}
+
+#main_header > #main_gnb{
+  position: absolute;
+  top: 0px; right: 0px;
+}
+
+#main_header > #main_lnb{
+  position: absolute;
+  bottom: 10px; right: 0;
+}
