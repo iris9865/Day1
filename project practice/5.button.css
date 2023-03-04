@@ -7,7 +7,7 @@ section.buttons > label {
   display: block;
   float: left;
 
-  width: px; height: 30px;
+  width: 100px; height: 30px;
   text-align: center; line-height: 30px;
 
   border: 1px solid black;
