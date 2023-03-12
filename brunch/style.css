@@ -1,0 +1,31 @@
+@import url(/Basic_code/reset.css);
+
+html {
+  background-color: rgb(254, 255, 251);
+}
+body {
+  margin: 30px 20%;
+  padding: 0;
+  text-align: center;
+}
+
+#title {
+  margin-bottom: 20px;
+}
+#title h2{
+  margin-bottom: 5px;
+}
+
+/* buttons */
+#themes button {
+  background-color: white;
+  color: gray;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+#themes button:hover{
+  border: 1px solid aqua;
+  color: aqua;
+}
+
