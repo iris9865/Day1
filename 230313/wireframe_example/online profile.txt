@@ -1,0 +1,9 @@
+div#wrap
+	.nav 
+		(a > i) * 2
+	.content
+		img + h1 + h3 + button
+	.info
+		ul > (li > i + span)*2
+	.footer
+	a * 4
