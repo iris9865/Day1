@@ -1,7 +1,7 @@
 @import url(/Basic_code/reset.css);
 
 html {
-  background-color: rgb(254, 255, 251);
+  background-color: rgb(255, 253, 247);
 }
 body {
   margin: 30px 20%;
@@ -14,6 +14,11 @@ body {
 }
 #title h2{
   margin-bottom: 5px;
+  font-family: 'Nanum Myeongjo', serif;
+}
+#title p{
+  font-size: small;
+  color: #777;
 }
 
 /* buttons */
@@ -28,4 +33,24 @@ body {
   border: 1px solid aqua;
   color: aqua;
 }
+
+/* Body */
+.wrap {
+  width: 90%;
+  margin: 10px auto;
+  position: relative;
+}
+
+.designer, .freelancer, .photographer, .analyst,
+ .editor, .employee{
+  width:30%; height: 270px;
+  margin: 10px;
+  border: none;
+  float: left;
+
+  background-color: #fff;
+  box-shadow: 5px 5px 5px rgb(178, 177, 177);
+}
+
+
 
