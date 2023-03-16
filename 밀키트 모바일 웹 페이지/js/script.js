@@ -9,5 +9,5 @@ $(function() {
 
     $(this).addClass('active')
     $(this).siblings('.category-accordian .title').removeClass('active');
-  })
-})
+  });
+});
