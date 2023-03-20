@@ -590,7 +590,7 @@ input[id=food-type-tab5]:checked ~ .food-type-tabs .tab5 {
 }
 
 /* ### Goods Detail Html ###  */
-.goods-detail-contents {
+.goods-detail-content {
   padding: 0;
 }
 .goods-detail-header {
