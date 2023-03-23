@@ -55,7 +55,7 @@ header {
 }
 .gnb-inner {
   /* border: 1px solid #000; */
-  width: calc(100%-40px);
+  width: calc(100% - 40px);
   margin: auto;
   line-height: 60px;
 }
@@ -95,6 +95,114 @@ header {
   transform: scale(1.1);
 }
 
+/* ### Home Page ### */
+.home-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.home-inner::before{
+  content: '';
+  background-color: #000;
+  width: 10px;
+  height: 100%;
+
+  position: absolute;
+  top: 0; left: 0;
+  animation: overlay 1s 2s ease-in-out both;
+}
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  line-height: 1.2em;
+  margin: 0;
+  animation: slideup 2s linear;
+  animation-fill-mode: both;
+}
+.welcome-text span {
+  display: block;
+  font-size: 26px;
+}
+.welcome-text i {
+  color: crimson;
+}
+.opacity-image {
+  background: url('/images/section-bg-01.jpg') no-repeat center center;
+  height: 100%;
+  background-size: cover;
+  opacity: 0;
+  animation: opacity-image 1s 2.4s ease-in both;
+}
+.home-heading{
+  position: absolute;
+  top: 50%;
+  left: 300px;
+  transform: translateY(-50%);
+}
+.home-heading span {
+  display: block;
+  font-size: 115px;
+  color: #fff;
+  font-weight: 600;
+  width: 0;
+  overflow: hidden;
+  animation: reveal 1s 3s ease-in-out both;
+}
+
+/* Animation */
+@keyframes slideup {
+  0% {
+    opacity: 0;
+    margin-top: 50px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  80% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 0;
+  }
+}
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes opacity-image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
 
 /* ### About Page ### */
 .about-inner {
@@ -153,21 +261,136 @@ header {
 .tab {
   height: 100%;
   float: left;
-  width: 33%;
+  width: 33.33%;
 }
 .tab .project-info {
   width: 25%;
   height: 100%;
   float: left;
+  
 }
 .tab .project-photo {
   width: 75%;
   float: left;
   overflow: hidden;
 }
+.tab .project-photo img {
+  width: 100%;
+}
+
 input[name=tabmenu] {
   display: none;
 }
+.btn {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 25%;
+  text-align: center;
+}
+.btn label {
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 8px;
+  position: relative;
+  cursor: pointer;
+}
+.btn label::before {
+  content: '';
+  width: 17px;
+  height: 17px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: -6px; 
+  left: -6px;
+  transition: 0.3s;
+}
+.btn label:hover::before {
+  border: 1px solid #aaa;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1]::before,
+input[id=tab2]:checked ~ .btn label[for=tab2]::before,
+input[id=tab3]:checked ~ .btn label[for=tab3]::before
+{
+  border: 1px solid #aaa;
+}
+input[id=tab1]:checked ~ .tabs {
+  margin-left: 0;
+}
+input[id=tab2]:checked ~ .tabs {
+  margin-left: -100%;
+}
+input[id=tab3]:checked ~ .tabs {
+  margin-left: -200%;
+}
+
+/* Project Info */
+.project-info {
+  padding: 50px;
+  position: relative;
+}
+.project-info h3{
+  font-size: 20px;
+  position: relative;
+}
+.project-info p{
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.project-info ul{
+  line-height: 2em;
+  margin: 30px 0;
+}
+.project-info ul li::before {
+  content: '\f054';
+  font-family: fontawesome;
+  margin-right: 10px;
+  font-size: 12px;
+}
+.detail {
+  margin-bottom: 50px;
+}
+.detail > div {
+  display: inline-block;
+  text-align: center;
+  width: 32%;
+  color: #999;
+}
+.detail span {
+  font-size: 36px;
+  font-weight: bold;
+  display: block;
+  color: #000;
+  margin-bottom: 10px;
+}
+.view-project {
+  display: inline-block;
+  background-color: #3f3f3f;
+  color: #fff;
+  width: 220px;
+  padding: 10px;
+  
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  transition: 0.5s;
+}
+.view-project:hover{
+  background-color: aqua;
+}
+.view-project i {
+  margin-left: 8px;
+  transition: 0.5s;
+}
+.view-project:hover i {
+  margin-left: 30px;
+}
+
 
 /* ### Plan Page ### */
 .plan-inner {
