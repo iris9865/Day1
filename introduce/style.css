@@ -72,26 +72,37 @@ body{
 }
 
 /* ### Mobile Page ###  */
-.mobile-box {
+.mobile-box, 
+.webpage-box{
   background-color: #fEFFFB;
   width: 80%; height: 1080px;
   margin: 150px auto;
   border-radius: 50px;
   box-shadow: 5px 5px 15px rgb(177, 175, 175);
 }
-.mobile-content {
+.mobile-content,
+.webpage-content {
   color: black;
   text-align: center;
   line-height: 400%;
 }
-.mobile-content .btn-view-more{
+.mobile-content h3,
+.webpage-content h3{
+  font-size: 50px;
+  padding: 74px 0;
+  margin-bottom: -40px;
+  font-weight: normal;
+}
+.btn-view-more{
   width: 200px; height: 60px;
   background-color: #FFE352;
   margin: auto auto;
+  margin-bottom: 40px;
   text-align: center;
   border-radius: 30px;
   font-size: 20px;
 }
-.slider-mobile img {
+.slider-mobile img,
+.slider-webpage img {
   width: 1000px; height: 700px;
 }
