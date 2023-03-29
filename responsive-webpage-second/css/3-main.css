@@ -1,8 +1,0 @@
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-#about {
-  background-color: var(--color-light-bd);
-  grid-column: 1 / -1;
-}
